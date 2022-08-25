@@ -5,6 +5,7 @@ export const ElementPanel = (): JSX.Element => {
     const [isVisible, setIsVisible] = useState(false);
 
     const changeVisibility = () => setIsVisible(!isVisible);
+
   return (
       <>
           <button type="button" className="add-btn" onClick={changeVisibility}>
