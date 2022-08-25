@@ -1,12 +1,12 @@
 import {useState} from 'react';
 
 export const useVisibility = (initialState = false) => {
-    const [visibility, setVisibility] = useState(false);
+    const [value, setValue] = useState(false);
 
-    const changeVisibility = () => setVisibility(!visibility);
+    const change = () => setValue(!value);
 
     return {
-        value: visibility,
-        change: changeVisibility
+        value,
+        change
     };
 }
