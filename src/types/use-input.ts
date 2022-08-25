@@ -4,4 +4,5 @@ export interface useInputType {
   value: string;
   onReset: () => void;
   onChange: (evt: ChangeEvent<any>) => void;
+  isChecked: (id: string) => boolean;
 }
