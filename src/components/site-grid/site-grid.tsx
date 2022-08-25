@@ -1,4 +1,5 @@
 import {useInputType} from '../../types/use-input';
+import {GRID_INPUT_ID} from '../../const';
 
 type SiteGridProps = {
     grid: useInputType
@@ -8,7 +9,7 @@ export const SiteGrid = ({grid}: SiteGridProps): JSX.Element => {
   return (
       <form className="grid-select">
           <h2 className="grid-select__header">Выберите сетку сайта</h2>
-          <input className="grid-select__radio visually-hidden" type="radio" name="grid" id="grid-landing" checked={grid.isChecked('grid-landing')} onChange={grid.onChange}/>
+          <input className="grid-select__radio visually-hidden" type="radio" name="grid" id="grid-landing" checked={grid.isChecked(GRID_INPUT_ID.LANDING)} onChange={grid.onChange}/>
           <label htmlFor="grid-landing" className="grid-select__btn">
               <span className="grid-select__text">Лендинг</span>
               <svg className="grid-select__img" width={240} height={132} viewBox="0 0 240 132" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +18,7 @@ export const SiteGrid = ({grid}: SiteGridProps): JSX.Element => {
                   <rect x="0.3" y="26.3" width="239.4" height="79.4" strokeWidth="0.6" strokeDasharray="5 5" />
               </svg>
           </label>
-          <input className="grid-select__radio visually-hidden" type="radio" name="grid" id="grid-blog" checked={grid.isChecked('grid-blog')} onChange={grid.onChange}/>
+          <input className="grid-select__radio visually-hidden" type="radio" name="grid" id="grid-blog" checked={grid.isChecked(GRID_INPUT_ID.BLOG)} onChange={grid.onChange}/>
           <label htmlFor="grid-blog" className="grid-select__btn">
               <span className="grid-select__text">Блог</span>
               <svg className="grid-select__img" width={240} height={132} viewBox="0 0 240 132" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +28,7 @@ export const SiteGrid = ({grid}: SiteGridProps): JSX.Element => {
                   <rect x="100.3" y="26.3" width="139.4" height="79.4" strokeWidth="0.6" strokeDasharray="5 5" />
               </svg>
           </label>
-          <input className="grid-select__radio visually-hidden" type="radio" name="grid" id="grid-shop" checked={grid.isChecked('grid-shop')} onChange={grid.onChange}/>
+          <input className="grid-select__radio visually-hidden" type="radio" name="grid" id="grid-shop" checked={grid.isChecked(GRID_INPUT_ID.SHOP)} onChange={grid.onChange}/>
           <label htmlFor="grid-shop" className="grid-select__btn">
               <span className="grid-select__text">Магазин</span>
               <svg className="grid-select__img" width={240} height={132} viewBox="0 0 240 132" fill="none" xmlns="http://www.w3.org/2000/svg">
