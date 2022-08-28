@@ -4,7 +4,7 @@ import { useInputType } from '../types/use-input';
 export const useInput = (initialValue: string): useInputType => {
   const [value, setValue] = useState(initialValue);
 
-  const handleChange = (evt: ChangeEvent<any>): void => {
+  const handleChange = (evt: ChangeEvent<HTMLInputElement>): void => {
     setValue(evt.target.id);
   };
 
