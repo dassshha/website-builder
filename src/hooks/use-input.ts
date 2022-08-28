@@ -5,7 +5,7 @@ export const useInput = (initialValue: string): useInputType => {
   const [value, setValue] = useState(initialValue);
 
   const handleChange = (evt: ChangeEvent<HTMLInputElement>): void => {
-    setValue(evt.target.id);
+    setValue(evt.target.value);
   };
 
   const handleReset = (): void => setValue(initialValue);

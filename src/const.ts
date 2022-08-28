@@ -21,4 +21,8 @@ export const ELEMENT_PAYLOAD = {
         TAG: 'p',
         PLACEHOLDER: 'Абзац текста',
     },
+    IMG: {
+        TAG: 'img',
+        PLACEHOLDER: 'Вставьте ссылку на изображение',
+    },
 };

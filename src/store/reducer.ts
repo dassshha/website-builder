@@ -6,7 +6,6 @@ import {getElementById} from '../components/get-element-by-id';
 
 const initialState: State = {
   headerElements: [],
-  currentElement: <ElementItem>{}
 };
 
 export const reducer = createReducer(initialState, (builder) => {

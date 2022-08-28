@@ -15,7 +15,7 @@ export const ChooseElement = ({listType}:ChooseElementProps): JSX.Element => {
           <button type="button" className="choose-elem__btn" onClick={() => dispatch(addElement({listType, tag: 'h2'}))}>Заголовок H2</button>
           <button type="button" className="choose-elem__btn" onClick={() => dispatch(addElement({listType, tag: 'h3'}))}>Заголовок H3</button>
           <button type="button" className="choose-elem__btn" onClick={() => dispatch(addElement({listType, tag: 'p'}))}>Абзац текста</button>
-          <button type="button" className="choose-elem__btn" >Изображение</button>
+          <button type="button" className="choose-elem__btn" onClick={() => dispatch(addElement({listType, tag: 'img'}))}>Изображение</button>
       </div>
   );
 }
