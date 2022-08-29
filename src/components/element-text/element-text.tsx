@@ -1,18 +1,19 @@
-import {createRef, FormEventHandler, useRef, useState} from 'react';
+import {createRef, FormEventHandler, useContext, useRef, useState} from 'react';
 import ContentEditable from 'react-contenteditable';
 import {useDispatch} from 'react-redux';
 import {deleteElement, updateElement} from '../../store/actions';
 import {ElementItem} from '../../types/element-item';
+import {ContainerContext} from '../header/header';
 
 type ElementTextProps = {
     className: string,
-    listType: string,
     placeholder: string
 } & ElementItem;
 
-export const ElementText = ({className, listType, tag, id, placeholder}: ElementTextProps): JSX.Element => {
+export const ElementText = ({className, tag, id, placeholder}: ElementTextProps): JSX.Element => {
     const text = useRef('');
     const dispatch = useDispatch();
+    const listType = useContext(ContainerContext);
 
     const handleChange = (evt: { target: { value: string; }; }) => {
         text.current = evt.target.value;

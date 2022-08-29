@@ -1,13 +1,11 @@
 import {useDispatch} from 'react-redux';
 import {addElement} from '../../store/actions';
+import {useContext} from 'react';
+import {ContainerContext} from '../header/header';
 
-type ChooseElementProps = {
-    listType: string,
-};
-
-
-export const ChooseElement = ({listType}:ChooseElementProps): JSX.Element => {
+export const ChooseElement = (): JSX.Element => {
     const dispatch = useDispatch();
+    const listType = useContext(ContainerContext);
 
   return (
       <div className="choose-elem ">

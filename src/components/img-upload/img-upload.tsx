@@ -1,17 +1,18 @@
-import {ChangeEvent, createRef, FormEvent, MouseEventHandler, useRef, useState} from 'react';
-import {useInput} from '../../hooks/use-input';
-import useImage from 'use-image';
-import {Image} from '../image/image';
+import {ChangeEvent, createRef, FormEvent, MouseEventHandler, useEffect, useRef, useState} from 'react';
 
-export const ImgUpload = (): JSX.Element => {
+type ImgUploadProps = {
+    changeUrl: (_:string) => void
+};
+
+export const ImgUpload = ({changeUrl}: ImgUploadProps): JSX.Element => {
     const urlRef = useRef('');
-    const [url, setUrl] = useState('');
+
     const upload = (evt: FormEvent) => {
         evt.preventDefault();
-        setUrl(urlRef.current);
+        changeUrl(urlRef.current);
     };
+
   return (
-      <>
           <div className="img-upload">
           <p>Загрузите изображение</p>
           <input type="url" placeholder="Вставьте ссылку на изображение" onChange={(evt: ChangeEvent<HTMLInputElement>) => urlRef.current = evt.target.value}/>
@@ -19,7 +20,5 @@ export const ImgUpload = (): JSX.Element => {
               <input className="visually-hidden" type="file" accept="image/png, image/jpeg" onClick={upload}/>
           </label>
         </div>
-          <Image url={url}></Image>
-          </>
   );
 }
