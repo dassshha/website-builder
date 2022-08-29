@@ -1,5 +1,5 @@
 export enum ActionType {
-  UpdateElement = 'updateElement',
   AddElement = 'addElement',
-  DeleteElement = 'deleteElement'
+  DeleteElement = 'deleteElement',
+  ChangeGrid = 'changeGrid'
 }

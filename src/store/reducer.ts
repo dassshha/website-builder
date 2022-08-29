@@ -1,6 +1,6 @@
 import {createReducer, nanoid} from '@reduxjs/toolkit';
 import { State } from '../types/state';
-import {addElement, deleteElement, updateElement} from './actions';
+import {addElement, changeGrid, deleteElement} from './actions';
 import {ElementItem} from '../types/element-item';
 import {getElementById} from '../components/get-element-by-id';
 
@@ -19,5 +19,8 @@ export const reducer = createReducer(initialState, (builder) => {
       const id = getElementById(state.headerElements, action.payload.id);
       state.headerElements.splice(id , 1);
     }
+  });
+  builder.addCase(changeGrid, (state, action) => {
+    state.headerElements = initialState.headerElements;
   });
 });
