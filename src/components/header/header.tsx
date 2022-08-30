@@ -3,13 +3,14 @@ import {useSelector} from 'react-redux';
 import {getHeaderElements} from '../../store/selectors';
 import {Element} from '../element/element';
 import {createContext} from 'react';
+import {CONTAINER_TYPE} from '../../const';
 
 export const ContainerContext = createContext('no provider');
 
 export const Header = (): JSX.Element => {
     const elements = useSelector(getHeaderElements);
   return (
-      <ContainerContext.Provider value={'HEADER'}>
+      <ContainerContext.Provider value={CONTAINER_TYPE.HEADER}>
           <header className={`header ${!elements.length && 'header--empty'}`}>
               <p className="placeholder">Header</p>
               <ElementPanel/>

@@ -26,3 +26,11 @@ export const ELEMENT_PAYLOAD = {
         PLACEHOLDER: 'Вставьте ссылку на изображение',
     },
 };
+
+export const CONTAINER_TYPE = {
+    HEADER: 'header',
+    FOOTER : 'footer',
+    CONTENT1: 'content-1',
+    CONTENT2: 'content-2',
+    CONTENT3: 'content-3'
+};

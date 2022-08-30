@@ -3,11 +3,12 @@ import {ContainerContext} from '../header/header';
 import {useSelector} from 'react-redux';
 import {getFooterElements, getHeaderElements} from '../../store/selectors';
 import {Element} from '../element/element';
+import {CONTAINER_TYPE} from '../../const';
 
 export const Footer = (): JSX.Element => {
     const elements = useSelector(getFooterElements);
   return (
-      <ContainerContext.Provider value={'FOOTER'}>
+      <ContainerContext.Provider value={CONTAINER_TYPE.FOOTER}>
           <footer className={`footer ${!elements.length && 'footer--empty'}`}>
               <p className="placeholder">Footer</p>
               <ElementPanel/>
