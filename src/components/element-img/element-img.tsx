@@ -4,7 +4,7 @@ import {useContext, useState} from 'react';
 import useImage from 'use-image';
 import {toast} from 'react-toastify';
 import {useDispatch} from 'react-redux';
-import {ContainerContext} from '../header/header';
+import {ContainerContext} from '../../contexts/container';
 import {deleteElement} from '../../store/actions';
 
 type ElementImgProps = {

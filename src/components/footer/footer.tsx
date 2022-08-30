@@ -1,5 +1,5 @@
 import {ElementPanel} from '../element-panel/element-panel';
-import {ContainerContext} from '../header/header';
+import {ContainerContext} from '../../contexts/container';
 import {useSelector} from 'react-redux';
 import {getFooterElements, getHeaderElements} from '../../store/selectors';
 import {Element} from '../element/element';

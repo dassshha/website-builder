@@ -1,7 +1,7 @@
 import {useDispatch} from 'react-redux';
 import {addElement} from '../../store/actions';
 import {useContext} from 'react';
-import {ContainerContext} from '../header/header';
+import {ContainerContext} from '../../contexts/container';
 
 export const ChooseElement = (): JSX.Element => {
     const dispatch = useDispatch();

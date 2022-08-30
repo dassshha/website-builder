@@ -3,7 +3,7 @@ import ContentEditable from 'react-contenteditable';
 import {useDispatch} from 'react-redux';
 import {deleteElement, } from '../../store/actions';
 import {ElementItem} from '../../types/element-item';
-import {ContainerContext} from '../header/header';
+import {ContainerContext} from '../../contexts/container';
 
 type ElementTextProps = {
     className: string,

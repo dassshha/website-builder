@@ -3,7 +3,7 @@ import {Element} from '../element/element';
 import {useSelector} from 'react-redux';
 import {getContent1Elements, getContent2Elements, getContent3Elements} from '../../store/selectors';
 import {State} from '../../types/state';
-import {ContainerContext} from '../header/header';
+import {ContainerContext} from '../../contexts/container';
 
 type ContentProps = {
     contentType: string
