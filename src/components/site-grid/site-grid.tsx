@@ -1,7 +1,7 @@
 import {useInputType} from '../../types/use-input';
 import {GRID_TYPE} from '../../const';
-import {ChangeEvent} from 'react';
 import {useDispatch} from 'react-redux';
+import {ChangeEvent} from 'react';
 import {changeGrid} from '../../store/actions';
 
 type SiteGridProps = {
@@ -9,6 +9,7 @@ type SiteGridProps = {
 };
 
 export const SiteGrid = ({grid}: SiteGridProps): JSX.Element => {
+
     const dispatch = useDispatch();
     const changeGridHandler = (evt: ChangeEvent<HTMLInputElement>) => {
         grid.onChange(evt);

@@ -1,7 +1,7 @@
 import {createRef, FormEventHandler, useContext, useRef, useState} from 'react';
 import ContentEditable from 'react-contenteditable';
 import {useDispatch} from 'react-redux';
-import {deleteElement, updateElement} from '../../store/actions';
+import {deleteElement, } from '../../store/actions';
 import {ElementItem} from '../../types/element-item';
 import {ContainerContext} from '../header/header';
 

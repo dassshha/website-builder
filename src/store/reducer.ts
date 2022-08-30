@@ -3,6 +3,7 @@ import { State } from '../types/state';
 import {addElement, changeGrid, deleteElement} from './actions';
 import {ElementItem} from '../types/element-item';
 import {getElementById} from '../components/get-element-by-id';
+import {GRID_TYPE} from '../const';
 
 const initialState: State = {
   headerElements: [],
