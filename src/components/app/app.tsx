@@ -1,11 +1,8 @@
-import React from 'react';
-import {Main} from '../../pages/main/main';
-import {ToastContainer} from 'react-toastify';
+import React from 'react'
+import { Main } from '../../pages/main/main'
 
 function App() {
-  return (
-    <Main />
-  );
+  return <Main />
 }
 
-export default App;
+export default App

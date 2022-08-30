@@ -1,8 +1,8 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent } from 'react'
 
 export interface useInputType {
-  value: string;
-  onReset: () => void;
-  onChange: (evt: ChangeEvent<any>) => void;
-  isChecked: (id: string) => boolean;
+  value: string
+  onReset: () => void
+  onChange: (evt: ChangeEvent<HTMLInputElement>) => void
+  isChecked: (id: string) => boolean
 }

@@ -1,5 +1,5 @@
-import {ElementsList} from '../types/elements-list';
+import { ElementsList } from '../types/elements-list'
 
 export const getElementById = (list: ElementsList, id: string): number => {
-  return list.findIndex((el) => el.id === id);
+  return list.findIndex((el) => el.id === id)
 }

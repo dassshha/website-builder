@@ -1,3 +1,3 @@
-import {createContext} from 'react';
+import { createContext } from 'react'
 
-export const ContainerContext = createContext('no provider');
+export const ContainerContext = createContext('no provider')

@@ -1,3 +1,3 @@
-import {ElementItem} from './element-item';
+import { ElementItem } from './element-item'
 
-export type ElementsList = ElementItem[];
+export type ElementsList = ElementItem[]

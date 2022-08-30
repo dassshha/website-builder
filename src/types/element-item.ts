@@ -1,4 +1,4 @@
 export type ElementItem = {
-    id: string
-    tag: string,
-};
+  id: string
+  tag: string
+}
